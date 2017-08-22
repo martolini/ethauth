@@ -2,10 +2,10 @@ if (process.env.NODE_ENV !== 'production') {
   require('dotenv').load(); // load .env into process.env
 }
 const admin = require('firebase-admin');
-
-if (process.env.FB_PK && process.env.DATABASE_URL) {
+const serviceAccount = require('./firebase-pk.json');
+if (process.env.DATABASE_URL && serviceAccount) {
   admin.initializeApp({
-    credential: admin.credential.cert(JSON.parse(process.env.FB_PK)),
+    credential: admin.credential.cert(serviceAccount),
     databaseUrl: process.env.DATABASE_URL
   });
 }
