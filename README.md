@@ -16,7 +16,7 @@ A simple demo can be located at https://ethauth-demo.msroed.io with the respecti
 
 - `git clone git@github.com:martolini/ethauth.git`
 - `npm install`
-- For firebase, you need both `DATABASE_URL` and `FB_PK` as environment variables. Add the contents of the .json private key to the `FB_PK` environment variable.
+- For firebase, you need two things. An environment variable `DATABASE_URL` from firebase, and a service account/pk file (.json) with the name `firebase-pk.json` in the root folder.
 - For JWT, set `JWT_SECRET` as an environment variable.
 - `npm start`
 
