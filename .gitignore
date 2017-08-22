@@ -1,0 +1,4 @@
+node_modules
+firebase-pk.json
+.env
+npm-debug.log
