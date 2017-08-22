@@ -8,7 +8,7 @@ An example auth/challenge server that uses `crypto` and `ethereumjs-util` to ver
 - Server verifies correct signature and responds with a jwt token.
 
 ### Demo
-A simple demo can be located at https://ethauth-demo.msroed.io with the respective git repo at https://github.com/martolini/ethauth-demo
+A simple demo can be located at https://ethauth.surge.sh with the respective git repo at https://github.com/martolini/ethauth-demo
 
 ### Try it
 
