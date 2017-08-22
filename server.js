@@ -29,7 +29,7 @@ app.post('/auth', (req, res) => {
           }).catch(err => res.status(500).send(err));
         break;
       case 'jwt':
-        let token = jwt.sign({ user: result.addr }, process.env.JWT_SECRET, { expiresIn: '1d' });
+        let token = jwt.sign({ user: result.address }, process.env.JWT_SECRET, { expiresIn: '1d' });
         res.json(Object.assign({}, result, { token }));
         break;
       default:
