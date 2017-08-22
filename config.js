@@ -3,7 +3,10 @@ if (process.env.NODE_ENV !== 'production') {
 }
 const admin = require('firebase-admin');
 
-admin.initializeApp({
-  credential: admin.credential.cert(JSON.parse(process.env.FB_PK)),
-  databaseUrl: process.env.DATABASE_URL
-});
+if (process.env.FB_PK && process.env.DATABASE_URL) {
+  admin.initializeApp({
+    credential: admin.credential.cert(JSON.parse(process.env.FB_PK)),
+    databaseUrl: process.env.DATABASE_URL
+  });
+}
+
